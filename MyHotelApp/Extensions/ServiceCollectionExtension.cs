@@ -12,6 +12,8 @@ namespace Microsoft.Extensions.DependencyInjection
         public static IServiceCollection AddApplicationServices(this IServiceCollection services)
         {
             services.AddScoped<IRoomService, RoomService>();
+            services.AddScoped<IIndexService, IndexService>();
+
 
             return services;
         }

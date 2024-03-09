@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using MyHotelApp.Core.Contracts;
 using MyHotelApp.Models;
 using System.Diagnostics;
 
@@ -6,16 +7,23 @@ namespace MyHotelApp.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
+        private readonly ILogger<HomeController> logger;
+        private readonly IIndexService service;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(
+            IIndexService _service,
+            ILogger<HomeController> _logger)
         {
-            _logger = logger;
+            service = _service;
+            logger = _logger;
         }
 
-        public IActionResult Index()
+        [HttpGet]
+        public async Task<IActionResult> Index()
         {
-            return View();
+            var model = await service.GetThreeRooms();
+
+            return View(model);
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
