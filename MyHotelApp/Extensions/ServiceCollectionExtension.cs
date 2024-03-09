@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
-using MyHotelApp.Data;
+using MyHotelApp.Infrastructure.Data;
 
 namespace Microsoft.Extensions.DependencyInjection
 {
