@@ -5,6 +5,6 @@ namespace MyHotelApp.Core.Contracts
 {
     public interface IIndexService
     {
-        Task<IEnumerable<RoomIndexServiceModel>> GetThreeRooms();
+        Task<IEnumerable<RoomIndexServiceModel>> GetThreeRoomsAsync();
     }
 }

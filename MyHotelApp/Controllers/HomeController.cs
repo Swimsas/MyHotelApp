@@ -21,7 +21,7 @@ namespace MyHotelApp.Controllers
         [HttpGet]
         public async Task<IActionResult> Index()
         {
-            var model = await service.GetThreeRooms();
+            var model = await service.GetThreeRoomsAsync();
 
             return View(model);
         }
