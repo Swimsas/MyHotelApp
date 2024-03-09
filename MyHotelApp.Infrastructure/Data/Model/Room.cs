@@ -8,6 +8,9 @@ namespace MyHotelApp.Infrastructure.Data.Model
         [Key]
         public int Id { get; set; }
 
+        [MaxLength(Constants.DataConstants.ImgRoomMaxLength)]
+        public string? ImgUrl { get; set; }
+
         [Required]
         public int FloorId { get; set; }
 

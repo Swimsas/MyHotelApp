@@ -3,7 +3,7 @@ using MyHotelApp.Infrastructure.Data;
 
 namespace MyHotelApp.Infrastructure.Common
 {
-    internal class Repository : IRepository
+    public class Repository : IRepository
     {
         private readonly DbContext context;
         public Repository(ApplicationDbContext _context) 

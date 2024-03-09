@@ -11,7 +11,7 @@
         public const int RoomTypeNameMaxLength = 30;
         public const int RoomTypeNameMinLength = 3;
 
-
+        public const int ImgRoomMaxLength = 1500;
 
     }
 }
