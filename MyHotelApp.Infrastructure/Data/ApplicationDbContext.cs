@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using MyHotelApp.Infrastructure.Data.Model;
+using MyHotelApp.Infrastructure.Data.Profiles;
 
 namespace MyHotelApp.Infrastructure.Data
 {
@@ -9,6 +10,16 @@ namespace MyHotelApp.Infrastructure.Data
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
             : base(options)
         {
+        }
+
+        protected override void OnModelCreating(ModelBuilder builder)
+        {
+            builder.ApplyConfiguration(new ViewTypeConfiguration());
+            builder.ApplyConfiguration(new FloorConfiguration());
+            builder.ApplyConfiguration(new RoomTypeConfiguration());
+            builder.ApplyConfiguration(new RoomConfiguration());
+
+            base.OnModelCreating(builder);
         }
 
         public DbSet<Room> Rooms { get; set; } = null!;
