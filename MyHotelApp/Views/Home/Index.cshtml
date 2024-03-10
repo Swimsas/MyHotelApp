@@ -5,7 +5,8 @@
     var houses = Model.ToList();
 }
 
-<div class="mb-5"></div>
+<h2 class="text-center text-">Our Hotel is the best in Golden Sand</h2>
+<br />
 
 <div id="carouselExampleCaptions" class="carousel slide">
     <div class="carousel-indicators">
@@ -19,7 +20,7 @@
             var room = houses[i];
 
             <div class="carousel-item @(i == 0 ? "active" : string.Empty)">
-                <img src=@room.Url class="d-block w-100" style="height:750px" alt="...">
+                <img src=@room.Url class="d-block w-100" style="height:700px" alt="...">
                 <div class="carousel-caption d-none d-md-block">
                     <h3>@room.RoomType</h3>
                     <h5>Floor: @room.Floor View: @room.View</h5>
