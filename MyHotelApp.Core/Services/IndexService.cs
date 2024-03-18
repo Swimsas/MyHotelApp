@@ -16,7 +16,7 @@ namespace MyHotelApp.Core.Services
         }
         public async Task<IEnumerable<RoomIndexServiceModel>> GetThreeRoomsAsync()
         {
-            Random random = new Random();
+            Random random = new();
             int startId = random.Next(0, 43);
 
             return await repository
