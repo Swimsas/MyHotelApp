@@ -86,7 +86,7 @@ namespace MyHotelApp.Controllers
             }
 
 
-            return RedirectToAction("Index","Home");
+            return RedirectToAction("Index","User");
         }
 
     }

@@ -1,0 +1,30 @@
+﻿@model IEnumerable<UserReservationView>
+
+@{
+    ViewBag.Title = "My room reservations";
+}
+
+<h2 class="text-center">@ViewBag.Title</h2>
+<hr />
+
+    <div class="row">
+        
+            @foreach (var reservation in Model)
+            {
+                <div class="col-md-4">
+                    <div class="card mb-3" >
+                    <img src=@reservation.Room.ImgUrl class="card-img-top" alt="Room Image">
+                     <div class="card-body">
+                        <h5 class="card-title">Room type: @reservation.Room.Type</h5>
+                    <h5 class="text-warning">Check in: @reservation.StartDate.ToString("yyyy-MM-dd")  <br> Check out: @reservation.LeaveDate.ToString("yyyy-MM-dd")</h5>
+                        <h6>Room view: @reservation.Room.View  Floor: @reservation.Room.Floor</h6>
+                        <h5>Price per nigth: @reservation.Room.Price</h5>
+                        <a class="btn btn-lg btn-danger" asp-route-id="@reservation.Id" asp-action="Delete">Cancel reservation</a>
+                      </div>
+                    </div>
+                </div>
+            }
+       
+        
+    </div>
+

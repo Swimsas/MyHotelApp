@@ -13,7 +13,7 @@ namespace Microsoft.Extensions.DependencyInjection
         {
             services.AddScoped<IRoomService, RoomService>();
             services.AddScoped<IIndexService, IndexService>();
-
+            services.AddScoped<IUserService, UserService>();
 
             return services;
         }

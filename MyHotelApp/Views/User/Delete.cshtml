@@ -1,0 +1,29 @@
+﻿@model UserReservationView
+@{
+    ViewBag.Title = "Delete Reservation";
+}
+
+<h2 class="text-center">@ViewBag.Title</h2>
+<hr />
+
+<div class="row justify-content-center">
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-body">
+                <img class="card-img" src="@Model.Room.ImgUrl" alt="Room Image"/>
+                <h3 class="card-title text-center">@Model.Room.Type</h3>
+                <p class="mb-0"><strong>Check in: @Model.StartDate.ToString("yyyy-MM-dd") </strong>  </p>
+                <p class="mb-0"><strong>Check out: @Model.LeaveDate.ToString("yyyy-MM-dd") </strong>  </p>
+                <p class="mb-0">Price per night: @Model.Room.Price</p>
+                <p class="text-danger mt-3">"Are you sure you want to delete this reservation?"</p>
+            </div>
+            <div class="card-footer">
+                <form asp-action="ConfirmDelete" method="post">
+                    <input type="hidden" asp-for="Id" />
+                    <button type="submit" class="btn btn-danger">Confirm Delete</button>
+                    <a asp-action="Index" class="btn btn-secondary">Cancel</a>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
