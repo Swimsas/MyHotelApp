@@ -1,11 +1,9 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using Microsoft.AspNetCore.Identity;
 using MyHotelApp.Core.Contracts;
 using MyHotelApp.Core.Models.Room;
 using MyHotelApp.Infrastructure.Common;
 using MyHotelApp.Infrastructure.Data.Model;
 using System.Globalization;
-using System.Security.Claims;
 
 namespace MyHotelApp.Core.Services
 {
@@ -96,11 +94,11 @@ namespace MyHotelApp.Core.Services
 
             if (sorting == 0) 
             { 
-                roomsQuery = roomsQuery.OrderByDescending(r => r.Price);
+                roomsQuery = roomsQuery.OrderBy(r => r.Price);
             }
             else
             {
-                roomsQuery = roomsQuery.OrderByDescending(r => r.FloorId);
+                roomsQuery = roomsQuery.OrderBy(r => r.FloorId);
             }
 
             var rooms =  await roomsQuery
