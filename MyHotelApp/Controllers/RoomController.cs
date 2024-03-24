@@ -4,6 +4,7 @@ using MyHotelApp.Core.Contracts;
 using MyHotelApp.Core.Models.Room;
 using System.Globalization;
 using System.Security.Claims;
+using static MyHotelApp.Core.Constants.ErrorMessages;
 
 namespace MyHotelApp.Controllers
 {
@@ -38,12 +39,12 @@ namespace MyHotelApp.Controllers
                 {
                     if (startDate < DateTime.Now.Date || startDate >= leaveDate) 
                     {
-                        ModelState.AddModelError("startDate", "Start date must be today or in present and before leaving date");
+                        ModelState.AddModelError(nameof(model.StartDate), DateErrorMessage);
                     }
                 }
                 else 
                 {
-                    ModelState.AddModelError(nameof(model.StartDate), "Use corect date format");
+                    ModelState.AddModelError(nameof(model.StartDate), DateFormatErrorMessage);
                 }
 
                 if (!ModelState.IsValid)

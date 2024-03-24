@@ -1,5 +1,6 @@
 ﻿using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
+using static MyHotelApp.Core.Constants.ErrorMessages;
 
 namespace MyHotelApp.Core.Models.Room
 {
@@ -26,11 +27,11 @@ namespace MyHotelApp.Core.Models.Room
         public IEnumerable<RoomViewModel> RoomViewModels { get; set; } = new List<RoomViewModel>();
 
         [DisplayName("Date of arriving")]
-        [RegularExpression(@"[1-9][0-9][0-9]{2}-([0][1-9]|[1][0-2])-([1-2][0-9]|[0][1-9]|[3][0-1])", ErrorMessage = "please use format")]
+        [RegularExpression(@"[1-9][0-9][0-9]{2}-([0][1-9]|[1][0-2])-([1-2][0-9]|[0][1-9]|[3][0-1])", ErrorMessage = DateFormatErrorMessage)]
         public string StartDate { get; set; } = null!;
 
         [DisplayName("Date of leaving")]
-        [RegularExpression(@"[1-9][0-9][0-9]{2}-([0][1-9]|[1][0-2])-([1-2][0-9]|[0][1-9]|[3][0-1])", ErrorMessage = "please use format")]
+        [RegularExpression(@"[1-9][0-9][0-9]{2}-([0][1-9]|[1][0-2])-([1-2][0-9]|[0][1-9]|[3][0-1])", ErrorMessage = DateFormatErrorMessage)]
         public string LeaveDate { get; set; } = null!;
 
         public bool IsFirstLoad { get; set; } = true;
