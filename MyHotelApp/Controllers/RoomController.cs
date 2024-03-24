@@ -72,8 +72,10 @@ namespace MyHotelApp.Controllers
             return View(model);
         }
 
+        
         public async Task<IActionResult> ProceedRoomBooking(int id, string startDate, string leaveDate) 
         {
+
             var userid = User.FindFirst(ClaimTypes.NameIdentifier)?.Value ?? string.Empty;
 
             int result =await service.BookRoom(id,startDate,leaveDate,userid);
