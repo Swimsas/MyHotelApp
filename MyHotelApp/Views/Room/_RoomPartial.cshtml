@@ -1,0 +1,22 @@
+﻿@model RoomViewModel
+
+
+<div class="col-md-4">
+    <div class="card mb-3" >
+        <img src=@Model.ImgUrl class="card-img-top" alt="Room Image">
+        <div class="card-body">
+           <h3>Type of Room: @Model.Type</h3>
+           <h4>View: @Model.View</h4>
+           <h4>Floor: @Model.Floor</h4>
+           <h3>Price per night: @Model.Price</h3>
+           <a class="btn btn-lg btn-primary"
+           asp-controller="Room" 
+           asp-action="ProceedRoomBooking"
+           asp-route-id="@Model.Id" 
+           asp-route-startDate="@ViewBag.StartDate"
+           asp-route-leaveDate="@ViewBag.LeaveDate"
+           >Book it now</a>
+        </div>
+    </div>
+</div>
+
