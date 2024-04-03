@@ -82,7 +82,7 @@ namespace MyHotelApp.Controllers
 
             if (result == 0)
             {
-                return StatusCode(400);
+                return BadRequest();
             }
 
 

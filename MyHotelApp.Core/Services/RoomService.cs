@@ -43,7 +43,7 @@ namespace MyHotelApp.Core.Services
                 )))
                 .FirstOrDefaultAsync(r => r.Id == id);
 
-            if (room == null && userId == string.Empty )
+            if (room == null || userId == string.Empty )
             {
                 return 0;
             }
