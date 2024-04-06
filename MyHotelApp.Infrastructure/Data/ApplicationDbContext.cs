@@ -18,6 +18,7 @@ namespace MyHotelApp.Infrastructure.Data
             builder.ApplyConfiguration(new FloorConfiguration());
             builder.ApplyConfiguration(new RoomTypeConfiguration());
             builder.ApplyConfiguration(new RoomConfiguration());
+            builder.ApplyConfiguration(new ReviewConfiguration());
 
             base.OnModelCreating(builder);
         }
@@ -27,8 +28,7 @@ namespace MyHotelApp.Infrastructure.Data
         public DbSet<Floor> Floors   { get; set; } = null!;
         public DbSet<ViewType> ViewTypes { get; set; } = null!;
         public DbSet<ReservationRoom> ReservationRooms { get; set; } = null!;
-        
-
+        public DbSet<Review> Reviews { get; set; } = null!;
 
     }
 }
