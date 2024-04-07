@@ -18,5 +18,8 @@ namespace MyHotelApp.Infrastructure.Data.Model
 
         [Required]
         public int Rating { get; set; }
+
+        [Required]
+        public string IdReviewer { get; set; } = string.Empty;
     }
 }
