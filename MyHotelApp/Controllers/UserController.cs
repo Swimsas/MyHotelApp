@@ -31,7 +31,7 @@ namespace MyHotelApp.Controllers
 
             if (model == null) 
             {
-                return StatusCode(400);
+                return BadRequest();
             }
 
             return View(model);
