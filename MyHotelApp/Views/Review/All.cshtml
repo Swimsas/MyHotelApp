@@ -1,0 +1,53 @@
+﻿@using MyHotelApp.Core.Contracts
+
+@model IEnumerable<ReviewModel>
+
+@inject IReviewService reviewService
+
+@{
+    ViewData["Title"] = "All Review";
+}
+
+        <h1 class="text-center">Reviews</h1>
+        @if (Model.Any())
+        {
+           <div>
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Description</th>
+                            <th>Rating</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var review in Model)
+                        {
+                            <tr>
+                                <td>@review.Name</td>
+                                <td>@review.Description</td>
+                                <td>@review.Rating</td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+           </div>
+           <div>
+               <h2 class="text-primary text-center">Average Raiting: @Model.Average(r => r.Rating).ToString("F2")/5</h2>
+           </div>
+        }
+        else
+        {
+            <p class="no-reviews">No reviews available.</p>
+        }
+
+        @if (await reviewService.CanUserWriteReviewAsync(User.Id()))
+        {
+            <div>
+                <a type="button" class="btn btn-primary btn-lg btn-block"asp-area="" asp-controller="Review" asp-action="AddReview">Add Review</a>
+            </div>
+        }
+       
+
+
+    

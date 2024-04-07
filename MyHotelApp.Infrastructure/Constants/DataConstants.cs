@@ -19,8 +19,8 @@
         public const int ReviewDescriptionMaxLength = 250;
         public const int ReviewDescriptionMinLength = 10;
 
-        public const int ReviewRatingMax = 1;
-        public const int ReviewRatingMin = 5;
+        public const int ReviewRatingMax = 5;
+        public const int ReviewRatingMin = 1;
 
     }
 }
