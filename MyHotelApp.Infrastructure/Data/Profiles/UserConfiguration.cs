@@ -14,9 +14,9 @@ namespace MyHotelApp.Infrastructure.Data.Profiles
             {
                 Id = "d2c465c4-7414-43db-931e-fba9a322125b",
                 UserName = "admin@mail.com",
-                NormalizedUserName = "AMIN@MAIL.COM",
+                NormalizedUserName = "ADMIN@MAIL.COM",
                 Email = "admin@mail.com",
-                NormalizedEmail = "AMIN@MAIL.COM"
+                NormalizedEmail = "ADMIN@MAIL.COM"
             };
             
             admin.PasswordHash = hasher.HashPassword(admin,"123456");
