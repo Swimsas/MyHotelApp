@@ -6,8 +6,7 @@ using System.Security.Claims;
 
 namespace MyHotelApp.Controllers
 {
-    [Authorize]
-    public class ReviewController : Controller
+    public class ReviewController : BaseController
     {
         private readonly IReviewService service;
 

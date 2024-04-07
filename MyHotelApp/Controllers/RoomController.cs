@@ -8,8 +8,7 @@ using static MyHotelApp.Core.Constants.ErrorMessages;
 
 namespace MyHotelApp.Controllers
 {
-    [Authorize]
-    public class RoomController : Controller
+    public class RoomController : BaseController
     {
         private readonly IRoomService service;
 

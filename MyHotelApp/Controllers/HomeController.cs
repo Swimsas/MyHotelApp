@@ -1,11 +1,12 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using MyHotelApp.Core.Contracts;
 using MyHotelApp.Models;
 using System.Diagnostics;
 
 namespace MyHotelApp.Controllers
 {
-    public class HomeController : Controller
+    public class HomeController : BaseController
     {
         private readonly ILogger<HomeController> logger;
         private readonly IIndexService service;
@@ -18,6 +19,7 @@ namespace MyHotelApp.Controllers
             logger = _logger;
         }
 
+        [AllowAnonymous]
         [HttpGet]
         public async Task<IActionResult> Index()
         {

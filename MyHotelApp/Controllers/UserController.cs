@@ -5,8 +5,7 @@ using System.Security.Claims;
 
 namespace MyHotelApp.Controllers
 {
-    [Authorize]
-    public class UserController : Controller
+    public class UserController : BaseController
     {
         private readonly IUserService service;
 
