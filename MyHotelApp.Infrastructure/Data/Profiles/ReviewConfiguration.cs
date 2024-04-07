@@ -4,7 +4,7 @@ using MyHotelApp.Infrastructure.Data.Model;
 
 namespace MyHotelApp.Infrastructure.Data.Profiles
 {
-    public class ReviewConfiguration : IEntityTypeConfiguration<Review>
+    internal class ReviewConfiguration : IEntityTypeConfiguration<Review>
     {
         public void Configure(EntityTypeBuilder<Review> builder)
         {
