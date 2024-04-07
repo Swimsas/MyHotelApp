@@ -21,5 +21,8 @@ namespace MyHotelApp.Infrastructure.Data.Model
 
         [Required]
         public string IdReviewer { get; set; } = string.Empty;
+
+        [Required]
+        public bool IsReviewed { get; set; } = false;
     }
 }
