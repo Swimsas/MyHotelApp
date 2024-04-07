@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using MyHotelApp.Infrastructure.Data;
 
@@ -11,9 +12,10 @@ using MyHotelApp.Infrastructure.Data;
 namespace MyHotelApp.Infrastructure.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240407094043_addAdminUser")]
+    partial class addAdminUser
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -47,15 +49,6 @@ namespace MyHotelApp.Infrastructure.Migrations
                         .HasFilter("[NormalizedName] IS NOT NULL");
 
                     b.ToTable("AspNetRoles", (string)null);
-
-                    b.HasData(
-                        new
-                        {
-                            Id = "1",
-                            ConcurrencyStamp = "67d0d374-06f9-41bd-8005-7b8d11d13919",
-                            Name = "Admin",
-                            NormalizedName = "ADMIN"
-                        });
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
@@ -152,15 +145,15 @@ namespace MyHotelApp.Infrastructure.Migrations
                         {
                             Id = "d2c465c4-7414-43db-931e-fba9a322125b",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "4c595a4f-76ec-46a7-876a-6dd5eb4810ea",
+                            ConcurrencyStamp = "50fa1879-1b0f-4cd8-8bb0-85e262cd5eed",
                             Email = "admin@mail.com",
                             EmailConfirmed = false,
                             LockoutEnabled = false,
                             NormalizedEmail = "AMIN@MAIL.COM",
                             NormalizedUserName = "AMIN@MAIL.COM",
-                            PasswordHash = "AQAAAAEAACcQAAAAEB3zKPY/L9v5Qahg/RcXALbwMdC0PbnkRjpkaznftxb5OQA9p0DwxNh8WrGTsjB/ng==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEBvze/YmjrA0D8hRwd+WP+irUk5H1lB7n/DKNwWOr4x89qXbBhXgSUTVDwO7eYDaFg==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "333cb4ea-1316-4709-8c54-41e1708593f8",
+                            SecurityStamp = "7e05ef5e-13c7-4ac8-9263-eef0ac657285",
                             TwoFactorEnabled = false,
                             UserName = "admin@mail.com"
                         });
@@ -228,13 +221,6 @@ namespace MyHotelApp.Infrastructure.Migrations
                     b.HasIndex("RoleId");
 
                     b.ToTable("AspNetUserRoles", (string)null);
-
-                    b.HasData(
-                        new
-                        {
-                            UserId = "d2c465c4-7414-43db-931e-fba9a322125b",
-                            RoleId = "1"
-                        });
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserToken<string>", b =>

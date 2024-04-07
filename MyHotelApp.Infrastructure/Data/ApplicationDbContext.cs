@@ -19,6 +19,9 @@ namespace MyHotelApp.Infrastructure.Data
             builder.ApplyConfiguration(new RoomTypeConfiguration());
             builder.ApplyConfiguration(new RoomConfiguration());
             builder.ApplyConfiguration(new ReviewConfiguration());
+            builder.ApplyConfiguration(new UserConfiguration());
+            builder.ApplyConfiguration(new RoleConfiguration());
+            builder.ApplyConfiguration(new RoleUserConfiguration());
 
             base.OnModelCreating(builder);
         }
