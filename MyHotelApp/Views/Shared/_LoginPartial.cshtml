@@ -1,9 +1,17 @@
 ﻿@using Microsoft.AspNetCore.Identity
+@using System.Security.Claims;
+@using static MyHotelApp.Core.Constants.AdministratorConstants;
 @inject SignInManager<IdentityUser> SignInManager
 @inject UserManager<IdentityUser> UserManager
 
 <ul class="navbar-nav">
-    
+    @if (SignInManager.IsSignedIn(User) && await UserManager.IsInRoleAsync(await UserManager.FindByIdAsync(User.Id()), AdminRole))
+    {
+        <li class="nav-item">
+            <a class="btn btn-warning"  asp-area="Admin" asp-controller="Home" asp-action="DashBoard">Admin Area</a>
+        </li>
+    }   
+
 @if (SignInManager.IsSignedIn(User))
 {
     <li class="nav-item">
