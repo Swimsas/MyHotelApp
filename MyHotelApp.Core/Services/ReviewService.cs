@@ -104,6 +104,15 @@ namespace MyHotelApp.Core.Services
             return model;
         }
 
+        public async Task<int> GetReviewToReviewedAsync()
+        {
+            var reviews = await repository.AllReadOnly<Review>()
+                .Where(r => r.IsReviewed == false)
+                .ToListAsync();
+
+            return reviews.Count;
+        }
+
         public async Task<bool> IsThereReviewAsync(int id)
         {
             var review = await repository.GetByIdAsync<Review>(id);

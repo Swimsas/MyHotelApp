@@ -1,4 +1,6 @@
-﻿﻿@{
+﻿@inject IReviewService service
+
+﻿@{
     ViewData["Title"] = "Dashboard";
 }
 
@@ -6,4 +8,14 @@
     <h2 class="display-4">Hello, Admin!</h2>
     <p class="lead mb-1 mt-3"> This is your administrator area - you can <b>read</b> and <b>aprove</b>  reviews.<br />You can <b>read</b> and <b>delete</b> all bookings too.</p>
     <hr class="my-4">
+</div>
+
+<br />
+<div class="row">
+    <div class="col-6 text-center">
+        <h4 class="text-primary">Reviews waiting to be reviewed: <b>@(await service.GetReviewToReviewedAsync())</b></h4>
+    </div>
+    <div class="col-6 text-center">
+        <button class="btn btn-primary" id="statistics-button">Show Statistics</button>
+    </div>
 </div>

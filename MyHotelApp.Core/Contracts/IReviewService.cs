@@ -17,5 +17,7 @@ namespace MyHotelApp.Core.Contracts
         Task<ReviewModel?> GetReviewByIdAsync(int id);
 
         Task DeleteReviewAsync(int id);
+
+        Task<int> GetReviewToReviewedAsync();
     }
 }
