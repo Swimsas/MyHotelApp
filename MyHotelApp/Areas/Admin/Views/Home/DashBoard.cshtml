@@ -1,4 +1,5 @@
-﻿@inject IReviewService service
+﻿@inject IReviewService reviewService
+@inject IUserService userService
 
 ﻿@{
     ViewData["Title"] = "Dashboard";
@@ -13,9 +14,11 @@
 <br />
 <div class="row">
     <div class="col-6 text-center">
-        <h4 class="text-primary">Reviews waiting to be reviewed: <b>@(await service.GetReviewToReviewedAsync())</b></h4>
+        <h4 class="text-primary">Reviews waiting to be reviewed: <b>@(await reviewService.GetReviewToReviewedAsync())</b></h4><br />
+        <a class="btn btn-lg btn-primary" asp-area="Admin" asp-controller="Review" asp-action="All">Reviews</a>
     </div>
     <div class="col-6 text-center">
-        <button class="btn btn-primary" id="statistics-button">Show Statistics</button>
+        <h4 class="text-primary">Reservation waiting to be approved: <b>@(await userService.GetCountOfReservationsForApproveAsync())</b></h4><br />
+        <a class="btn btn-lg btn-primary" asp-area="Admin" asp-controller="Reservation" asp-action="AllReservations">Reservations</a>
     </div>
 </div>
