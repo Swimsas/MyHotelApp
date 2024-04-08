@@ -13,7 +13,7 @@ namespace MyHotelApp.Infrastructure.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
     [Migration("20240407100639_addRoleAdminAndAddAdmiinRoleToAdmin")]
-    partial class addRoleAdminAndAddAdmiinRoleToAdmin
+    partial class AddRoleAdminAndAddAdmiinRoleToAdmin
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

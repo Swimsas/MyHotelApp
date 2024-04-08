@@ -4,7 +4,7 @@
 
 namespace MyHotelApp.Infrastructure.Migrations
 {
-    public partial class fixAdminNormalizedMistake : Migration
+    public partial class FixAdminNormalizedMistake : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {

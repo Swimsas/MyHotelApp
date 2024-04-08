@@ -4,7 +4,7 @@
 
 namespace MyHotelApp.Infrastructure.Migrations
 {
-    public partial class addIsReviewedToReviewTable : Migration
+    public partial class AddIsReviewedToReviewTable : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {

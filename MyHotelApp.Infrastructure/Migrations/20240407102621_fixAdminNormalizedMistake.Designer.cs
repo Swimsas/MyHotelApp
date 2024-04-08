@@ -13,7 +13,7 @@ namespace MyHotelApp.Infrastructure.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
     [Migration("20240407102621_fixAdminNormalizedMistake")]
-    partial class fixAdminNormalizedMistake
+    partial class FixAdminNormalizedMistake
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

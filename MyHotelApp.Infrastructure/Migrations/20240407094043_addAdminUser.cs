@@ -4,7 +4,7 @@
 
 namespace MyHotelApp.Infrastructure.Migrations
 {
-    public partial class addAdminUser : Migration
+    public partial class AddAdminUser : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {

@@ -13,7 +13,7 @@ namespace MyHotelApp.Infrastructure.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
     [Migration("20240407135054_addIsReviewedToReviewTable")]
-    partial class addIsReviewedToReviewTable
+    partial class AddIsReviewedToReviewTable
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

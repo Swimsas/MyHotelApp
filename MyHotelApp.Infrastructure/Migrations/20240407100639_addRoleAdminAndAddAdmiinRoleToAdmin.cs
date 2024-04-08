@@ -4,7 +4,7 @@
 
 namespace MyHotelApp.Infrastructure.Migrations
 {
-    public partial class addRoleAdminAndAddAdmiinRoleToAdmin : Migration
+    public partial class AddRoleAdminAndAddAdmiinRoleToAdmin : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
