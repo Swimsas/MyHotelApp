@@ -13,5 +13,8 @@
         public string ImgUrl { get; set; } = string.Empty;
 
         public string Price {  get; set; } = string.Empty;
+
+        public string StartDate { get; set; }
+        public string LeaveDate { get; set; }
     }
 }

@@ -1,5 +1,8 @@
 ﻿@model RoomViewModel
-
+@{
+    Model.StartDate = ViewBag.StartDate;
+    Model.LeaveDate = ViewBag.LeaveDate;
+}
 
 <div class="col-md-4">
     <div class="card mb-3" >
@@ -9,13 +12,12 @@
            <h4>View: @Model.View</h4>
            <h4>Floor: @Model.Floor</h4>
            <h3>Price per night: @Model.Price</h3>
-           <a class="btn btn-lg btn-primary"
-           asp-controller="Room" 
-           asp-action="ProceedRoomBooking"
-           asp-route-id="@Model.Id" 
-           asp-route-startDate="@ViewBag.StartDate"
-           asp-route-leaveDate="@ViewBag.LeaveDate"
-           >Book it now</a>
+            <form asp-controller="Room" asp-action="ProceedRoomBooking" method="post">
+                <input type="hidden" asp-for="Id"/>
+                <input type="hidden" asp-for="@Model.StartDate"/>
+                <input type="hidden" asp-for="@Model.LeaveDate"/>
+                <button type="submit" class="btn btn-lg btn-primary">Book it now</button>
+            </form>
         </div>
     </div>
 </div>

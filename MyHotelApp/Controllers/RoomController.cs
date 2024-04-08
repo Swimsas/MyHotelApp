@@ -1,5 +1,4 @@
-﻿using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using MyHotelApp.Core.Contracts;
 using MyHotelApp.Core.Models.Room;
 using System.Globalization;
@@ -71,13 +70,13 @@ namespace MyHotelApp.Controllers
             return View(model);
         }
 
-        
-        public async Task<IActionResult> ProceedRoomBooking(int id, string startDate, string leaveDate) 
+        [HttpPost]
+        public async Task<IActionResult> ProceedRoomBooking([FromForm] int id, string startDate, string leaveDate)
         {
 
-            var userid = User.FindFirst(ClaimTypes.NameIdentifier)?.Value ?? string.Empty;
+            var userid = User.Id();
 
-            int result =await service.BookRoom(id,startDate,leaveDate,userid);
+            int result = await service.BookRoom(id, startDate, leaveDate, userid);
 
             if (result == 0)
             {
@@ -85,8 +84,7 @@ namespace MyHotelApp.Controllers
             }
 
 
-            return RedirectToAction("Index","User");
+            return RedirectToAction("Index", "User");
         }
-
     }
 }
