@@ -1,13 +1,64 @@
-﻿@using MyHotelApp.Core.Contracts
+﻿@model IEnumerable<ReviewModel>
 
-@model IEnumerable<ReviewModel>
+@using MyHotelApp.Core.Contracts
 
 @inject IReviewService reviewService
 
-@{
-    ViewData["Title"] = "All Review";
-}
+<style>
+    #div {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 0;
+    }
 
+    .myContainer {
+        max-width: 800px;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+        text-align: center;
+        color: #333;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+    }
+
+    th, td {
+        padding: 12px;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+    }
+
+    th {
+        background-color: #f2f2f2;
+        color: #333;
+        font-weight: bold;
+    }
+
+    tr:hover {
+        background-color: #f9f9f9;
+    }
+
+    .no-reviews {
+        text-align: center;
+        color: #888;
+    }
+
+</style>
+
+@{
+    ViewData["Title"] = "All Reviews";
+}
+ <div class="myContainer"> 
         <h1 class="text-center">Reviews</h1>
         @if (Model.Any())
         {
@@ -47,7 +98,7 @@
                 <a type="button" class="btn btn-primary btn-lg btn-block"asp-area="" asp-controller="Review" asp-action="AddReview">Add Review</a>
             </div>
         }
-       
+</div>
 
 
-    
+
