@@ -1,5 +1,4 @@
-﻿using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using MyHotelApp.Core.Contracts;
 using System.Security.Claims;
 
@@ -17,7 +16,7 @@ namespace MyHotelApp.Controllers
         [HttpGet]
         public async Task<IActionResult> Index()
         {
-            var userId = GetUserId();
+            var userId = User.Id();
             
             var model = await service.GetUserReservationAsync(userId);
 
@@ -47,7 +46,7 @@ namespace MyHotelApp.Controllers
                 return BadRequest();
             }
 
-            var userId = GetUserId();
+            var userId = User.Id();
 
             if (reservationToDelete.UserId != userId)
             {
@@ -57,10 +56,6 @@ namespace MyHotelApp.Controllers
             await service.DeleteReservation(id);
 
             return RedirectToAction(nameof(Index));
-        }
-        private string GetUserId()
-        {
-            return User.FindFirst(ClaimTypes.NameIdentifier)?.Value ?? string.Empty;
         }
     }
 }

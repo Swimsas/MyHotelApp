@@ -16,6 +16,7 @@ namespace MyHotelApp.Controllers
         }
 
         [AllowAnonymous]
+        [HttpGet]
         public async Task<IActionResult> All()
         {
             var model = await service.AllReviewsAsync();
