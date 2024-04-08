@@ -9,5 +9,11 @@ namespace MyHotelApp.Core.Contracts
         Task<UserReservationView?> GetReseravationByIdAsync(int id);
 
         Task DeleteReservation(int id);
+
+        Task<IEnumerable<UserReservationView>> AllReservationsAsync();
+
+        Task<int> GetCountOfReservationsForApproveAsync();
+
+        Task ApproveReservationAsync(int Id);
     }
 }

@@ -13,5 +13,9 @@ namespace MyHotelApp.Core.Models.User
         public DateTime LeaveDate { get; set; }
 
         public string UserId { get; set; } = null!;
+
+        public bool IsApproved { get; set; }
+
+        public string UserName { get; set; } = string.Empty;
     }
 }

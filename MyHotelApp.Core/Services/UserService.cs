@@ -4,7 +4,6 @@ using MyHotelApp.Core.Models.Room;
 using MyHotelApp.Core.Models.User;
 using MyHotelApp.Infrastructure.Common;
 using MyHotelApp.Infrastructure.Data.Model;
-using System.ComponentModel.DataAnnotations;
 
 namespace MyHotelApp.Core.Services
 {
@@ -37,6 +36,7 @@ namespace MyHotelApp.Core.Services
                 LeaveDate = reservation.CheckOutDate,
                 Id = reservation.Id,
                 UserId = reservation.UserId,
+                IsApproved = reservation.IsApproved,
                 Room = new RoomViewModel() 
                 {
                     ImgUrl = room!.ImgUrl!,
@@ -56,6 +56,8 @@ namespace MyHotelApp.Core.Services
                     Id = r.Id,
                     StartDate = r.CheckInDate,
                     LeaveDate = r.CheckOutDate,
+                    UserName = r.User.UserName,
+                    IsApproved = r.IsApproved,
                     Room = new RoomViewModel() 
                     {
                         Id = r.Room.Id,
@@ -75,6 +77,49 @@ namespace MyHotelApp.Core.Services
         {
             await repository.DeleteAsync<ReservationRoom>(id);
             await repository.SaveChangesAsync();
-        } 
+        }
+
+        public async Task<IEnumerable<UserReservationView>> AllReservationsAsync()
+        {
+            var reservations = await repository.AllReadOnly<ReservationRoom>()
+                .Select(r => new UserReservationView()
+                {
+                    Id = r.Id,
+                    StartDate = r.CheckInDate,
+                    LeaveDate = r.CheckOutDate,
+                    UserName = r.User.UserName,
+                    IsApproved = r.IsApproved,
+                    Room = new RoomViewModel()
+                    {
+                        Id = r.Room.Id,
+                        Floor = r.Room.Floor.Id,
+                        ImgUrl = r.Room.ImgUrl!,
+                        Type = r.Room.RoomType.Name,
+                        View = r.Room.ViewType.Name,
+                        Price = r.Room.Price.ToString()
+                    }
+                })
+                .ToListAsync();
+
+            return reservations;
+        }
+
+        public async Task<int> GetCountOfReservationsForApproveAsync()
+        {
+            var reservations = await repository.AllReadOnly<ReservationRoom>()
+                .Where(r => r.IsApproved == false)
+                .ToArrayAsync();
+
+
+            return reservations.Length;
+        }
+
+        public async Task ApproveReservationAsync(int id)
+        {
+            var reservation = await repository.GetByIdAsync<ReservationRoom>(id);
+            reservation!.IsApproved = true;
+
+            await repository.SaveChangesAsync();
+        }
     }
 }
