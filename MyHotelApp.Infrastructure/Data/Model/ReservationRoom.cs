@@ -26,5 +26,8 @@ namespace MyHotelApp.Infrastructure.Data.Model
 
         [Required]
         public DateTime CheckOutDate { get; set; }
+
+        [Required]
+        public bool IsApproved { get; set; } = false;
     }
 }
