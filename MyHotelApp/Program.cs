@@ -11,12 +11,14 @@ var app = builder.Build();
 
 if (app.Environment.IsDevelopment())
 {
-    app.UseDeveloperExceptionPage();
+    //app.UseDeveloperExceptionPage();
+    app.UseStatusCodePagesWithReExecute("/Home/Error", "?code={0}");
     app.UseMigrationsEndPoint();
 }
 else
 {
-    app.UseExceptionHandler("/Home/Error");
+    app.UseExceptionHandler("/Home/Error/500");
+    app.UseStatusCodePagesWithReExecute("/Home/Error", "?code={0}");
     app.UseHsts();
 }
 

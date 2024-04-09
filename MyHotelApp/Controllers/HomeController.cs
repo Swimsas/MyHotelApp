@@ -1,7 +1,6 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using MyHotelApp.Core.Contracts;
-using MyHotelApp.Models;
 using System.Diagnostics;
 
 namespace MyHotelApp.Controllers
@@ -29,9 +28,19 @@ namespace MyHotelApp.Controllers
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
+        public IActionResult Error(int code)
         {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+            if (code == 400)
+            { 
+                return View("Error400");
+            }
+
+            if (code == 401)
+            {
+                return View("Error401");
+            }
+
+            return View();
         }
     }
 }
