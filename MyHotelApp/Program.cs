@@ -11,8 +11,7 @@ var app = builder.Build();
 
 if (app.Environment.IsDevelopment())
 {
-    //app.UseDeveloperExceptionPage();
-    app.UseStatusCodePagesWithReExecute("/Home/Error", "?code={0}");
+    app.UseDeveloperExceptionPage();
     app.UseMigrationsEndPoint();
 }
 else

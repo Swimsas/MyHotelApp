@@ -33,6 +33,11 @@ namespace MyHotelApp.Controllers
                 return BadRequest();
             }
 
+            if (model.UserId != User.Id()) 
+            {
+                return Unauthorized(); 
+            }
+
             return View(model);
         }
 
