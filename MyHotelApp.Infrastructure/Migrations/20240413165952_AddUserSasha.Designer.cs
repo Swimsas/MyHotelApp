@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using MyHotelApp.Infrastructure.Data;
 
@@ -11,9 +12,10 @@ using MyHotelApp.Infrastructure.Data;
 namespace MyHotelApp.Infrastructure.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240413165952_AddUserSasha")]
+    partial class AddUserSasha
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -52,7 +54,7 @@ namespace MyHotelApp.Infrastructure.Migrations
                         new
                         {
                             Id = "1",
-                            ConcurrencyStamp = "71c573dc-fbab-4e63-842b-22f6214a05b6",
+                            ConcurrencyStamp = "4d673b49-1984-4663-8956-c3cadf4e6122",
                             Name = "Admin",
                             NormalizedName = "ADMIN"
                         });
@@ -152,15 +154,15 @@ namespace MyHotelApp.Infrastructure.Migrations
                         {
                             Id = "d2c465c4-7414-43db-931e-fba9a322125b",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "f0577b40-533a-4a81-9086-5ff4b745bd73",
+                            ConcurrencyStamp = "328356ac-1a26-4522-9739-e007bb59cfcf",
                             Email = "admin@mail.com",
                             EmailConfirmed = false,
                             LockoutEnabled = false,
                             NormalizedEmail = "ADMIN@MAIL.COM",
                             NormalizedUserName = "ADMIN@MAIL.COM",
-                            PasswordHash = "AQAAAAEAACcQAAAAEAx7wR4U5x5HHR62W6lKNP4H5dSo9eUTHcJeJbO49Hk7QG6j6+Q15oLy6jSoY9bARA==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEIeT5lzLWkW1zDdIjVVxAQbB74PkkZ3kk+yDg1W0wn5b6cuHtschMrlCgbbG22Pk8g==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "3cea12b7-eada-471a-9e6f-a435ed8ef62a",
+                            SecurityStamp = "3dc25626-c4c4-4994-bb40-8d0a897f9c5c",
                             TwoFactorEnabled = false,
                             UserName = "admin@mail.com"
                         },
@@ -168,7 +170,7 @@ namespace MyHotelApp.Infrastructure.Migrations
                         {
                             Id = "14c0d211-8033-4592-b98a-dad3c969c2e0",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "9203a92d-c02b-41d1-b87b-d34b279ed5c0",
+                            ConcurrencyStamp = "91e80085-1497-4090-b191-39ea4e1afba7",
                             Email = "sa6a@mail.bg",
                             EmailConfirmed = false,
                             LockoutEnabled = false,
@@ -176,25 +178,9 @@ namespace MyHotelApp.Infrastructure.Migrations
                             NormalizedUserName = "SA6A@MAIL.BG",
                             PasswordHash = "AQAAAAEAACcQAAAAECacEJr212soez+07REkpk1pEDKRZVLgB1BN/uNFuns52wXtnYFZMgMrFydGDdogWw==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "833c4610-6732-4059-acaf-f9e06de0e06d",
+                            SecurityStamp = "f15e978e-9aea-45ef-a222-32ff1d2b5d94",
                             TwoFactorEnabled = false,
                             UserName = "sa6a@mail.bg"
-                        },
-                        new
-                        {
-                            Id = "c0ad926a-ddc5-4480-b96b-45724f15f6f1",
-                            AccessFailedCount = 0,
-                            ConcurrencyStamp = "24703ddc-e702-4393-820e-9a32ed57ca40",
-                            Email = "test@abv.bg",
-                            EmailConfirmed = false,
-                            LockoutEnabled = false,
-                            NormalizedEmail = "TEST@ABV.BG",
-                            NormalizedUserName = "TEST@ABV.BG",
-                            PasswordHash = "AQAAAAEAACcQAAAAEPa42oB5ebIN9P7sDxOtZ/d7J0DM6vZ0RXB4dqHs5t9o1v2GEgPvHvniWzHOb6gjFQ==",
-                            PhoneNumberConfirmed = false,
-                            SecurityStamp = "b2134890-6644-4e2e-ace5-979c46bb6be4",
-                            TwoFactorEnabled = false,
-                            UserName = "test@abv.bg"
                         });
                 });
 
