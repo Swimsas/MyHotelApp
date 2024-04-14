@@ -1,6 +1,7 @@
 # MyHotelApp
 
 Seeded users:
+
 Username:sa6a@mail.bg Password:123456
 
 UserName:test@abv.bg Password:fGuX_8Tem68n_.c
