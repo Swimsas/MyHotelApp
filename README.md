@@ -2,9 +2,11 @@
 
 Seeded users:
 Username:sa6a@mail.bg Password:123456
+
 UserName:test@abv.bg Password:fGuX_8Tem68n_.c
 
-Admin user
+Admin user:
+
 Username:admin@mail.com Password:123456
 
 This is web application for booking rooms in a Hotel.
