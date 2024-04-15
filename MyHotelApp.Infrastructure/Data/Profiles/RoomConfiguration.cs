@@ -16,7 +16,7 @@ namespace MyHotelApp.Infrastructure.Data.Profiles
                     FloorId = 1,
                     RoomTypeId = 1,
                     ViewTypeId = 2,
-                    Price = 200
+                    Price = 150
                 },
                 new Room
                 {
@@ -25,7 +25,7 @@ namespace MyHotelApp.Infrastructure.Data.Profiles
                     FloorId = 1,
                     RoomTypeId = 1,
                     ViewTypeId = 2,
-                    Price = 200
+                    Price = 151
                 },
                 new Room
                 {
@@ -34,7 +34,7 @@ namespace MyHotelApp.Infrastructure.Data.Profiles
                     FloorId = 1,
                     RoomTypeId = 1,
                     ViewTypeId = 2,
-                    Price = 200
+                    Price = 155
                 },
                 new Room
                 {
@@ -43,7 +43,7 @@ namespace MyHotelApp.Infrastructure.Data.Profiles
                     FloorId = 1,
                     RoomTypeId = 2,
                     ViewTypeId = 2,
-                    Price = 200
+                    Price = 160
                 },
                 new Room
                 {
@@ -52,7 +52,7 @@ namespace MyHotelApp.Infrastructure.Data.Profiles
                     FloorId = 1,
                     RoomTypeId = 3,
                     ViewTypeId = 2,
-                    Price = 200
+                    Price = 161
                 },
                 new Room
                 {
@@ -61,7 +61,7 @@ namespace MyHotelApp.Infrastructure.Data.Profiles
                     FloorId = 1,
                     RoomTypeId = 1,
                     ViewTypeId = 2,
-                    Price = 200
+                    Price = 161
                 },
                 new Room
                 {
@@ -70,7 +70,7 @@ namespace MyHotelApp.Infrastructure.Data.Profiles
                     FloorId = 1,
                     RoomTypeId = 2,
                     ViewTypeId = 2,
-                    Price = 200
+                    Price = 162
                 },
                 new Room
                 {
@@ -79,7 +79,7 @@ namespace MyHotelApp.Infrastructure.Data.Profiles
                     FloorId = 1,
                     RoomTypeId = 3,
                     ViewTypeId = 2,
-                    Price = 200
+                    Price = 162
                 },
                 new Room
                 {
@@ -88,7 +88,7 @@ namespace MyHotelApp.Infrastructure.Data.Profiles
                     FloorId = 1,
                     RoomTypeId = 1,
                     ViewTypeId = 2,
-                    Price = 200
+                    Price = 163
                 },
                 new Room
                 {
@@ -97,7 +97,7 @@ namespace MyHotelApp.Infrastructure.Data.Profiles
                     FloorId = 1,
                     RoomTypeId = 2,
                     ViewTypeId = 2,
-                    Price = 200
+                    Price = 166
                 },
                 new Room
                 {
@@ -106,7 +106,7 @@ namespace MyHotelApp.Infrastructure.Data.Profiles
                     FloorId = 2,
                     RoomTypeId = 3,
                     ViewTypeId = 2,
-                    Price = 200
+                    Price = 170
                 },
                 new Room
                 {
@@ -115,7 +115,7 @@ namespace MyHotelApp.Infrastructure.Data.Profiles
                     FloorId = 2,
                     RoomTypeId = 1,
                     ViewTypeId = 1,
-                    Price = 200
+                    Price = 171
                 },
                 new Room
                 {
@@ -124,7 +124,7 @@ namespace MyHotelApp.Infrastructure.Data.Profiles
                     FloorId = 2,
                     RoomTypeId = 1,
                     ViewTypeId = 2,
-                    Price = 200
+                    Price = 177
                 },
                 new Room
                 {
@@ -133,7 +133,7 @@ namespace MyHotelApp.Infrastructure.Data.Profiles
                     FloorId = 2,
                     RoomTypeId = 1,
                     ViewTypeId = 2,
-                    Price = 200
+                    Price = 180
                 },
                 new Room
                 {
@@ -142,7 +142,7 @@ namespace MyHotelApp.Infrastructure.Data.Profiles
                     FloorId = 2,
                     RoomTypeId = 2,
                     ViewTypeId = 2,
-                    Price = 200
+                    Price = 181
                 },
                 new Room
                 {
@@ -151,7 +151,7 @@ namespace MyHotelApp.Infrastructure.Data.Profiles
                     FloorId = 2,
                     RoomTypeId = 3,
                     ViewTypeId = 1,
-                    Price = 200
+                    Price = 182
                 },
                 new Room
                 {
@@ -160,7 +160,7 @@ namespace MyHotelApp.Infrastructure.Data.Profiles
                     FloorId = 2,
                     RoomTypeId = 1,
                     ViewTypeId = 1,
-                    Price = 200
+                    Price = 190
                 },
                 new Room
                 {
@@ -169,7 +169,7 @@ namespace MyHotelApp.Infrastructure.Data.Profiles
                     FloorId = 2,
                     RoomTypeId = 2,
                     ViewTypeId = 2,
-                    Price = 200
+                    Price = 190
                 },
                 new Room
                 {
@@ -178,7 +178,7 @@ namespace MyHotelApp.Infrastructure.Data.Profiles
                     FloorId = 2,
                     RoomTypeId = 3,
                     ViewTypeId = 2,
-                    Price = 200
+                    Price = 195
                 },
                 new Room
                 {
@@ -205,7 +205,7 @@ namespace MyHotelApp.Infrastructure.Data.Profiles
                     FloorId = 2,
                     RoomTypeId = 3,
                     ViewTypeId = 2,
-                    Price = 200
+                    Price = 210
                 },
                 new Room
                 {
@@ -214,7 +214,7 @@ namespace MyHotelApp.Infrastructure.Data.Profiles
                     FloorId = 3,
                     RoomTypeId = 1,
                     ViewTypeId = 1,
-                    Price = 200
+                    Price = 215
                 },
                 new Room
                 {
@@ -223,7 +223,7 @@ namespace MyHotelApp.Infrastructure.Data.Profiles
                     FloorId = 3,
                     RoomTypeId = 1,
                     ViewTypeId = 1,
-                    Price = 200
+                    Price = 205
                 },
                 new Room
                 {
@@ -232,7 +232,7 @@ namespace MyHotelApp.Infrastructure.Data.Profiles
                     FloorId = 3,
                     RoomTypeId = 1,
                     ViewTypeId = 2,
-                    Price = 200
+                    Price = 204
                 },
                 new Room
                 {
@@ -241,7 +241,7 @@ namespace MyHotelApp.Infrastructure.Data.Profiles
                     FloorId = 3,
                     RoomTypeId = 2,
                     ViewTypeId = 1,
-                    Price = 200
+                    Price = 203
                 },
                 new Room
                 {
@@ -250,7 +250,7 @@ namespace MyHotelApp.Infrastructure.Data.Profiles
                     FloorId = 3,
                     RoomTypeId = 3,
                     ViewTypeId = 1,
-                    Price = 200
+                    Price = 201
                 },
                 new Room
                 {
@@ -259,7 +259,7 @@ namespace MyHotelApp.Infrastructure.Data.Profiles
                     FloorId = 3,
                     RoomTypeId = 1,
                     ViewTypeId = 2,
-                    Price = 200
+                    Price = 207
                 },
                 new Room
                 {
@@ -268,7 +268,7 @@ namespace MyHotelApp.Infrastructure.Data.Profiles
                     FloorId = 3,
                     RoomTypeId = 2,
                     ViewTypeId = 1,
-                    Price = 200
+                    Price = 209
                 },
                 new Room
                 {
@@ -277,7 +277,7 @@ namespace MyHotelApp.Infrastructure.Data.Profiles
                     FloorId = 3,
                     RoomTypeId = 3,
                     ViewTypeId = 2,
-                    Price = 200
+                    Price = 211
                 },
                 new Room
                 {
@@ -286,7 +286,7 @@ namespace MyHotelApp.Infrastructure.Data.Profiles
                     FloorId = 3,
                     RoomTypeId = 1,
                     ViewTypeId = 2,
-                    Price = 200
+                    Price = 220
                 },
                 new Room
                 {
@@ -295,7 +295,7 @@ namespace MyHotelApp.Infrastructure.Data.Profiles
                     FloorId = 3,
                     RoomTypeId = 2,
                     ViewTypeId = 1,
-                    Price = 200
+                    Price = 220
                 },
                 new Room
                 {
@@ -304,7 +304,7 @@ namespace MyHotelApp.Infrastructure.Data.Profiles
                     FloorId = 3,
                     RoomTypeId = 3,
                     ViewTypeId = 2,
-                    Price = 200
+                    Price = 210
                 }, new Room
                 {
                     Id = 34,
@@ -312,7 +312,7 @@ namespace MyHotelApp.Infrastructure.Data.Profiles
                     FloorId = 4,
                     RoomTypeId = 1,
                     ViewTypeId = 1,
-                    Price = 200
+                    Price = 214
                 },
                 new Room
                 {
@@ -330,7 +330,7 @@ namespace MyHotelApp.Infrastructure.Data.Profiles
                     FloorId = 4,
                     RoomTypeId = 1,
                     ViewTypeId = 2,
-                    Price = 200
+                    Price = 219
                 },
                 new Room
                 {
@@ -339,7 +339,7 @@ namespace MyHotelApp.Infrastructure.Data.Profiles
                     FloorId = 4,
                     RoomTypeId = 2,
                     ViewTypeId = 1,
-                    Price = 200
+                    Price = 230
                 },
                 new Room
                 {
@@ -348,7 +348,7 @@ namespace MyHotelApp.Infrastructure.Data.Profiles
                     FloorId = 4,
                     RoomTypeId = 3,
                     ViewTypeId = 1,
-                    Price = 200
+                    Price = 230
                 },
                 new Room
                 {
@@ -357,7 +357,7 @@ namespace MyHotelApp.Infrastructure.Data.Profiles
                     FloorId = 4,
                     RoomTypeId = 1,
                     ViewTypeId = 2,
-                    Price = 200
+                    Price = 230
                 },
                 new Room
                 {
@@ -366,7 +366,7 @@ namespace MyHotelApp.Infrastructure.Data.Profiles
                     FloorId = 4,
                     RoomTypeId = 2,
                     ViewTypeId = 1,
-                    Price = 200
+                    Price = 235
                 },
                 new Room
                 {
@@ -375,7 +375,7 @@ namespace MyHotelApp.Infrastructure.Data.Profiles
                     FloorId = 4,
                     RoomTypeId = 3,
                     ViewTypeId = 2,
-                    Price = 200
+                    Price = 228
                 },
                 new Room
                 {
@@ -384,7 +384,7 @@ namespace MyHotelApp.Infrastructure.Data.Profiles
                     FloorId = 4,
                     RoomTypeId = 1,
                     ViewTypeId = 2,
-                    Price = 200
+                    Price = 240
                 },
                 new Room
                 {
@@ -402,7 +402,7 @@ namespace MyHotelApp.Infrastructure.Data.Profiles
                     FloorId = 4,
                     RoomTypeId = 3,
                     ViewTypeId = 2,
-                    Price = 200
+                    Price = 198
                 }
                 );
         }
