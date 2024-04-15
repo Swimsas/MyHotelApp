@@ -17,12 +17,12 @@ namespace MyHotelApp.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> BookRoom([FromQuery]BookRoomSearchModel model)
+        public async Task<IActionResult> BookRoom([FromQuery] BookRoomSearchModel model)
         {
             model.ViewsCategoryModels = await service.GetViewCategories();
             model.RoomTypesCategoryModels = await service.GetRoomTypeCategories();
 
-            if (model.StartDate != null && model.LeaveDate != null) 
+            if (model.StartDate != null && model.LeaveDate != null)
             {
                 model.IsFirstLoad = false;
 
@@ -30,24 +30,29 @@ namespace MyHotelApp.Controllers
                 DateTime leaveDate = DateTime.Now;
 
                 if (DateTime.TryParseExact(
-                    model.StartDate, "yyyy-MM-dd", CultureInfo.InvariantCulture, DateTimeStyles.None, out startDate)  
+                    model.StartDate, "yyyy-MM-dd", CultureInfo.InvariantCulture, DateTimeStyles.None, out startDate)
                     &&
                     DateTime.TryParseExact(
                         model.LeaveDate, "yyyy-MM-dd", CultureInfo.InvariantCulture, DateTimeStyles.None, out leaveDate))
                 {
-                    if (startDate < DateTime.Now.Date || startDate >= leaveDate) 
+                    if (startDate < DateTime.Now.Date || startDate >= leaveDate)
                     {
                         ModelState.AddModelError(nameof(model.StartDate), DateErrorMessage);
                     }
                 }
-                else 
+                else
                 {
                     ModelState.AddModelError(nameof(model.StartDate), DateFormatErrorMessage);
                 }
 
                 if (!ModelState.IsValid)
                 {
-                    model.IsFirstLoad = true;
+                    model = new BookRoomSearchModel()
+                    {
+                        ViewsCategoryModels = await service.GetViewCategories(),
+                        RoomTypesCategoryModels = await service.GetRoomTypeCategories()
+                    };
+
                     return View(model);
                 }
 
@@ -64,9 +69,9 @@ namespace MyHotelApp.Controllers
                 model.RoomViewModels = newModel.RoomViewModels;
                 model.TotalRoomsCount = newModel.TotalRoomsCount;
             }
-                
-              
-            
+
+
+
             return View(model);
         }
 

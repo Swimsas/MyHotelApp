@@ -98,7 +98,7 @@ namespace MyHotelApp.Core.Services
             }
             else
             {
-                roomsQuery = roomsQuery.OrderBy(r => r.FloorId);
+                roomsQuery = roomsQuery.OrderByDescending(r => r.FloorId);
             }
 
             var rooms =  await roomsQuery

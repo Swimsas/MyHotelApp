@@ -18,10 +18,13 @@ namespace MyHotelApp.Core.Models.Room
         [DisplayName("Room type")]
         public IEnumerable<RoomTypeCategoryModel> RoomTypesCategoryModels { get; set; } = new List<RoomTypeCategoryModel>();
 
+        [Range(0,2)]
         public int Sorting {  get; set; }
 
+        [Range(0, 2)]
         public int ViewType { get; set; }
 
+        [Range(0, 3)]
         public int RoomType { get; set; }
 
         public IEnumerable<RoomViewModel> RoomViewModels { get; set; } = new List<RoomViewModel>();
