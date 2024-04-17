@@ -37,3 +37,30 @@
         <span class="visually-hidden">Next</span>
     </button>
 </div>
+
+<div class="mb-5"></div>
+
+<div class="row">
+   <div class="col-12 text-center">
+       <button class="btn btn-primary" id="statistics-button">Show Statistics</button>
+   </div>     
+</div>
+
+<div class="d-done" id="statistics">
+    <div class="row">
+        <h2 class="text-center" id="total"></h2>
+    </div>
+</div>
+
+@section Scripts 
+{
+    <script>
+        $('#statistics-button').on('click', ev => 
+        {
+            $.get('/api/statistic', (data) => {
+                $('#total').text("We have " + data.totalUsers + " happy users who made " + data.totalBookings + " reservation with raiting " + data.avgRating + "/5.");
+                $('#statistics-button').hide();
+            });
+        });
+    </script>
+} 
